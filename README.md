@@ -3,3 +3,5 @@
 I decided to use sveltekit as I want to refresh my memory on it.
 
 Let's make this website look better every day! And of course do the challenges as well.
+
+See this site live on: https://adventofcode2022-tice-sveltekit.netlify.app
