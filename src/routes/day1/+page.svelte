@@ -1,4 +1,6 @@
 <script lang="ts">
+	import sum from '$lib/sum';
+
 	const calorieString = `
 6750
 6538
@@ -2236,10 +2238,6 @@
 4460
 `;
 
-	const sum = (arr: number[]) => {
-		return arr.reduce((partSum, item) => partSum + item, 0);
-	};
-
 	const elveTotalCaloryArray = calorieString.split('\n\n').map((elveCaloryStack) => {
 		const arr = elveCaloryStack.split('\n').map((el) => Number(el));
 		return sum(arr);
@@ -2255,4 +2253,10 @@
 <h2>{highest}</h2>
 <h2>{threeHeighest}</h2>
 
-<p><a target="_blank" href="https://github.com/TravelingTice/advent_of_code_2022_sveltekit/blob/master/src/routes/day1/%2Bpage.svelte">See the code for this day</a></p>
+<p>
+	<a
+		target="_blank"
+		href="https://github.com/TravelingTice/advent_of_code_2022_sveltekit/blob/master/src/routes/day1/%2Bpage.svelte"
+		>See the code for this day</a
+	>
+</p>
