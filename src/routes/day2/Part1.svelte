@@ -56,11 +56,3 @@
 </script>
 
 <p>{answer}</p>
-
-<p>
-	<a
-		target="_blank"
-		href="https://github.com/TravelingTice/advent_of_code_2022_sveltekit/blob/master/src/routes/day2/Part1.svelte"
-		>See the code for this part</a
-	>
-</p>

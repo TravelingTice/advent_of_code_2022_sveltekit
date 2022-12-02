@@ -2256,7 +2256,7 @@
 <p>
 	<a
 		target="_blank"
-		href="https://github.com/TravelingTice/advent_of_code_2022_sveltekit/blob/master/src/routes/day1/%2Bpage.svelte"
+		href="https://github.com/TravelingTice/advent_of_code_2022_sveltekit/blob/master/src/routes/day1"
 		>See the code for this day</a
 	>
 </p>
