@@ -28,30 +28,36 @@
 
 		currentMove = 0
 		currentStack = { ...data.input.startingStacksAsArray }
+
+		performMove(true)
+	}
+
+	let timeout: NodeJS.Timeout
+
+	const performMove = (shouldClearTimeout = false) => {
+		if (shouldClearTimeout) clearTimeout(timeout)
+
+		if (currentMove >= movesArray.length) return
+
+		const move = movesArray[currentMove]
+		const currentStackLength = currentStack[move.from].length
+
+		// Get stack to move
+		const stackToMove = currentStack[move.from].slice(currentStackLength - move.amnt)
+
+		// Remove it from the current stack
+		currentStack[move.from] = currentStack[move.from].slice(0, currentStackLength - move.amnt)
+
+		// Depending on the solution flip it and add it onto the stack where it will move to
+		const newStack = showingSolution === 1 ? stackToMove.reverse() : stackToMove
+		currentStack[move.to] = currentStack[move.to].concat(newStack)
+
+		currentMove++
+
+		timeout = setTimeout(performMove, 20)
 	}
 
 	onMount(() => {
-		const performMove = () => {
-			if (currentMove >= movesArray.length) return
-
-			const move = movesArray[currentMove]
-			const currentStackLength = currentStack[move.from].length
-
-			// Get stack to move
-			const stackToMove = currentStack[move.from].slice(currentStackLength - move.amnt)
-
-			// Remove it from the current stack
-			currentStack[move.from] = currentStack[move.from].slice(0, currentStackLength - move.amnt)
-
-			// Depending on the solution flip it and add it onto the stack where it will move to
-			const newStack = showingSolution === 1 ? stackToMove.reverse() : stackToMove
-			currentStack[move.to] = currentStack[move.to].concat(newStack)
-
-			currentMove++
-
-			setTimeout(performMove, 20)
-		}
-
 		setTimeout(performMove, 20)
 	})
 </script>
