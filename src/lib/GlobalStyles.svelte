@@ -20,4 +20,23 @@
 		color: #007991;
 		text-decoration: none;
 	}
+
+	:global(button) {
+		background-color: #454955;
+		color: white;
+		font-weight: bold;
+		padding: 10px 20px;
+		border-radius: 4px;
+		border: none;
+		cursor: pointer;
+		transition: background-color 150ms ease-out;
+	}
+
+	:global(button:hover) {
+		background-color: #33363e;
+	}
+
+	:global(button:disabled) {
+		background-color: #797f8f;
+	}
 </style>

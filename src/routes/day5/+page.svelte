@@ -59,11 +59,11 @@
 <h2>Day 5 let's go</h2>
 
 <button on:click={switchSolution} disabled={showingSolution === 1}>
-	Show{#if showingSolution === 1}ing{/if} part 1
+	Show{#if showingSolution === 1}ing{/if} solution 1
 </button>
 
 <button on:click={switchSolution} disabled={showingSolution === 2}>
-	Show{#if showingSolution === 2}ing{/if} part 2
+	Show{#if showingSolution === 2}ing{/if} solution 2
 </button>
 
 <div class="move-info">
