@@ -2499,11 +2499,11 @@ B X
 C X
 A X
 A Z
-`;
+`
 
 /** @type {import('./$types').PageLoad} */
 export async function load() {
 	return {
 		input
-	};
+	}
 }

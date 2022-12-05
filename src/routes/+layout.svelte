@@ -1,6 +1,6 @@
 <script>
-	import GlobalStyles from '$lib/GlobalStyles.svelte';
-	import Nav from '$lib/Nav.svelte';
+	import GlobalStyles from '$lib/GlobalStyles.svelte'
+	import Nav from '$lib/Nav.svelte'
 </script>
 
 <svelte:head>

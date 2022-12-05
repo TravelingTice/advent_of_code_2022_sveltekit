@@ -999,11 +999,11 @@ const input = `
 20-22,5-21
 32-91,79-92
 33-52,33-52
-`;
+`
 
 /** @type {import('./$types').PageLoad} */
 export async function load() {
 	return {
 		input
-	};
+	}
 }

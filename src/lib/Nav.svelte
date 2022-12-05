@@ -1,8 +1,8 @@
 <script lang="ts">
-	const modules = import.meta.glob('../routes/**/*.svelte');
+	const modules = import.meta.glob('../routes/**/*.svelte')
 	const routes = Object.keys(modules)
 		.filter((route) => route.match(/routes\/[^\+].+\+page.svelte$/))
-		.map((route) => route.split('/')[2]);
+		.map((route) => route.split('/')[2])
 </script>
 
 <nav>

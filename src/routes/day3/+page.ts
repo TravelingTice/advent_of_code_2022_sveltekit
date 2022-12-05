@@ -299,11 +299,11 @@ wvJJFsvpSSvJFjlHjzplQwJhCfVVhmBmVWhHWmWVWqBqMW
 GjQtgjhPhGgsQjgtthrrvBlvljCrpCdlqBMb
 RFDHDRFRczzlbqlbvqvHdb
 DDFcRWTWFbSwRWbGtSGtgPfGGSPPtg
-`;
+`
 
 /** @type {import('./$types').PageLoad} */
 export async function load() {
 	return {
 		input
-	};
+	}
 }

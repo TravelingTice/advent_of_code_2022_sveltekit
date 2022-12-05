@@ -1,5 +1,5 @@
 <script lang="ts">
-	import sum from '$lib/sum';
+	import sum from '$lib/sum'
 
 	const calorieString = `
 6750
@@ -2236,18 +2236,18 @@
 7397
 7163
 4460
-`;
+`
 
 	const elveTotalCaloryArray = calorieString.split('\n\n').map((elveCaloryStack) => {
-		const arr = elveCaloryStack.split('\n').map((el) => Number(el));
-		return sum(arr);
-	});
+		const arr = elveCaloryStack.split('\n').map((el) => Number(el))
+		return sum(arr)
+	})
 
-	const sorted = elveTotalCaloryArray.sort((a, b) => b - a);
+	const sorted = elveTotalCaloryArray.sort((a, b) => b - a)
 
-	const highest = sorted[0];
+	const highest = sorted[0]
 
-	const threeHeighest = sum(sorted.slice(0, 3));
+	const threeHeighest = sum(sorted.slice(0, 3))
 </script>
 
 <h2>{highest}</h2>
