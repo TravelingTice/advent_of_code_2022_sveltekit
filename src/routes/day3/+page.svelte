@@ -10,3 +10,11 @@
 
 <h2>Part 2</h2>
 <Part2 input={data.input} />
+
+<p>
+	<a
+		target="_blank"
+		href="https://github.com/TravelingTice/advent_of_code_2022_sveltekit/blob/master/src/routes/day3"
+		>See the code for this day</a
+	>
+</p>

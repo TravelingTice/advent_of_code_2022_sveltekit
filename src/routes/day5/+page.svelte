@@ -64,6 +64,14 @@
 
 <h2>Day 5 let's go</h2>
 
+<p>
+	<a
+		target="_blank"
+		href="https://github.com/TravelingTice/advent_of_code_2022_sveltekit/blob/master/src/routes/day5"
+		>See the code for this day</a
+	>
+</p>
+
 <button on:click={switchSolution} disabled={showingSolution === 1}>
 	Show{#if showingSolution === 1}ing{/if} solution 1
 </button>
