@@ -23,3 +23,11 @@
 {:else}
 	<p>Doing the calculation in WebAssembly so quickly you won't even be able to read this.</p>
 {/if}
+
+<p>
+	<a
+		target="_blank"
+		href="https://github.com/TravelingTice/advent_of_code_2022_sveltekit/blob/master/src/routes/day6"
+		>See the code for this day</a
+	>
+</p>
