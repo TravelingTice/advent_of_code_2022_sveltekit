@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"rust:dev": "cd src/routes/day6/rust_crate && cargo watch -i .gitignore -i \"pkg/*\" -s \"wasm-pack build --target web\"",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -27,7 +28,10 @@
 		"svelte-preprocess": "^4.10.7",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
-		"vite": "^3.2.4"
+		"vite": "^3.2.4",
+		"vite-plugin-top-level-await": "^1.2.2",
+		"vite-plugin-wasm": "^3.1.0",
+		"day-6-rust": "./src/routes/day6/rust_crate/pkg"
 	},
 	"type": "module"
 }
