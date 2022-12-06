@@ -1,12 +1,25 @@
 <script lang="ts">
-	import init, { add } from 'day-6-rust'
+	import init, { get_start_packet_marker, get_start_message_marker } from 'day-6-rust'
 	import { onMount } from 'svelte'
+
+	export let data: { message: string }
+
+	export let packetMarker: number = 0
+	export let messageMarker: number = 0
 
 	onMount(async () => {
 		await init()
 
-		console.log(add(1, 5))
+		packetMarker = get_start_packet_marker(data.message)
+		messageMarker = get_start_message_marker(data.message)
 	})
 </script>
 
 <h2>Day 6 in WebAssembly!</h2>
+
+{#if packetMarker && messageMarker}
+	<p>The marker at which a packet has arrived is at: {packetMarker}</p>
+	<p>And it's message arrives at marker: {messageMarker}</p>
+{:else}
+	<p>Doing the calculation in WebAssembly so quickly you won't even be able to read this.</p>
+{/if}

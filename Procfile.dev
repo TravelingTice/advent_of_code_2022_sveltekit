@@ -1,0 +1,2 @@
+web: pnpm dev
+rust: pnpm rust:dev

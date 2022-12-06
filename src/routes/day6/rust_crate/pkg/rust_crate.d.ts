@@ -1,17 +1,24 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
-* @param {number} a
-* @param {number} b
+* @param {string} message
 * @returns {number}
 */
-export function add(a: number, b: number): number;
+export function get_start_packet_marker(message: string): number;
+/**
+* @param {string} message
+* @returns {number}
+*/
+export function get_start_message_marker(message: string): number;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly add: (a: number, b: number) => number;
+  readonly get_start_packet_marker: (a: number, b: number) => number;
+  readonly get_start_message_marker: (a: number, b: number) => number;
+  readonly __wbindgen_malloc: (a: number) => number;
+  readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
 }
 
 export type SyncInitInput = BufferSource | WebAssembly.Module;

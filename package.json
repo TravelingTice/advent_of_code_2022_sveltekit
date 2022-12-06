@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"dev:all": "overmind start -f Procfile.dev",
 		"dev": "vite dev",
 		"rust:dev": "cd src/routes/day6/rust_crate && cargo watch -i .gitignore -i \"pkg/*\" -s \"wasm-pack build --target web\"",
 		"build": "vite build",
