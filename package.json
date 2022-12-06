@@ -38,8 +38,11 @@
 		"vite-plugin-wasm": "^3.1.0"
 	},
 	"type": "module",
-	"pre-commit": [
-		"rust:build",
-		"remove-rust-gitignore"
-	]
+	"pre-commit": {
+		"silent": false,
+		"run": [
+			"rust:build",
+			"remove-rust-gitignore"
+		]
+	}
 }
