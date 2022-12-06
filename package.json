@@ -6,7 +6,8 @@
 		"dev": "vite dev",
 		"rust:dev": "cd src/routes/day6/rust_crate && cargo watch -i .gitignore -i \"pkg/*\" -s \"wasm-pack build --target web\"",
 		"build": "vite build",
-		"preinstall": "cargo install wasm-pack && wasm-pack build src/routes/day6/rust_crate --target web",
+		"rust:build": "wasm-pack build src/routes/day6/rust_crate --target web",
+		"remove-rust-gitignore": "rm src/routes/day6/rust_crate/pkg/.gitignore && git add src/routes/day6/rust_crate/pkg/.gitignore",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -20,9 +21,11 @@
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
+		"day-6-rust": "./src/routes/day6/rust_crate/pkg",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"pre-commit": "^1.2.2",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"svelte": "^3.53.1",
@@ -32,8 +35,11 @@
 		"typescript": "^4.9.3",
 		"vite": "^3.2.4",
 		"vite-plugin-top-level-await": "^1.2.2",
-		"vite-plugin-wasm": "^3.1.0",
-		"day-6-rust": "./src/routes/day6/rust_crate/pkg"
+		"vite-plugin-wasm": "^3.1.0"
 	},
-	"type": "module"
+	"type": "module",
+	"pre-commt": [
+		"rust:build",
+		"remove-rust-gitignore"
+	]
 }
