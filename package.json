@@ -6,6 +6,7 @@
 		"dev": "vite dev",
 		"rust:dev": "cd src/routes/day6/rust_crate && cargo watch -i .gitignore -i \"pkg/*\" -s \"wasm-pack build --target web\"",
 		"build": "vite build",
+		"echo": "echo \"TEST\"",
 		"rust:build": "wasm-pack build src/routes/day6/rust_crate --target web",
 		"remove-rust-gitignore": "rm src/routes/day6/rust_crate/pkg/.gitignore && git add src/routes/day6/rust_crate/pkg/.gitignore",
 		"preview": "vite preview",
@@ -38,11 +39,7 @@
 		"vite-plugin-wasm": "^3.1.0"
 	},
 	"type": "module",
-	"pre-commit": {
-		"silent": false,
-		"run": [
-			"rust:build",
-			"remove-rust-gitignore"
-		]
-	}
+	"pre-commit": [
+		"echo"
+	]
 }
