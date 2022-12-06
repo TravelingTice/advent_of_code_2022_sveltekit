@@ -40,6 +40,7 @@
 	},
 	"type": "module",
 	"pre-commit": [
+		"echo",
 		"echo"
 	]
 }
