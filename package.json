@@ -6,6 +6,7 @@
 		"dev": "vite dev",
 		"rust:dev": "cd src/routes/day6/rust_crate && cargo watch -i .gitignore -i \"pkg/*\" -s \"wasm-pack build --target web\"",
 		"build": "vite build",
+		"preinstall": "wasm-pack build src/routes/day6/rust_crate --target web",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
