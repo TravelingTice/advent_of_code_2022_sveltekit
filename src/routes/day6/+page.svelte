@@ -21,7 +21,7 @@
 	<p>The marker at which a packet has arrived is at: {packetMarker}</p>
 	<p>And it's message arrives at marker: {messageMarker}</p>
 {:else}
-	<p>Doing the calculation in WebAssembly so quickly you won't even be able to read this.</p>
+	<p>Doing the calculation in WebAssembly so quickly you won't even be able to see this!</p>
 {/if}
 
 <p>
