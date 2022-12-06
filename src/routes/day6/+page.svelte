@@ -5,7 +5,7 @@
 	onMount(async () => {
 		await init()
 
-		console.log(add(1, 2))
+		console.log(add(1, 5))
 	})
 </script>
 
