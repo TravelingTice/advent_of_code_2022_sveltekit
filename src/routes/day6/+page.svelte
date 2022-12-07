@@ -1,5 +1,5 @@
 <script lang="ts">
-	import init, { get_start_packet_marker, get_start_message_marker } from 'day-6-rust'
+	import init, { get_start_packet_marker, get_start_message_marker, test_message } from 'day-6-rust'
 	import { onMount } from 'svelte'
 
 	export let data: { message: string }
@@ -9,6 +9,8 @@
 
 	onMount(async () => {
 		await init()
+
+		console.log(test_message("test"))
 
 		packetMarker = get_start_packet_marker(data.message)
 		messageMarker = get_start_message_marker(data.message)

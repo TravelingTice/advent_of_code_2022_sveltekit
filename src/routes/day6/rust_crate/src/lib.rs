@@ -1,5 +1,8 @@
 use wasm_bindgen::prelude::*;
 
+mod test;
+pub use crate::test::test_message;
+
 fn get_marker(message: String, distinct_characters_amount: i32) -> i32 {
     // make it a vector
     let message_arr: Vec<&str> = message.split("").collect();

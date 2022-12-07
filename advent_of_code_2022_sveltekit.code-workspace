@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "rust_crate",
+			"path": "src/routes/day6/rust_crate"
+		}
+	],
+	"settings": {}
+}
