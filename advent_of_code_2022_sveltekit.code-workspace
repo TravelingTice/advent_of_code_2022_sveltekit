@@ -4,8 +4,8 @@
 			"path": "."
 		},
 		{
-			"name": "rust_crate",
-			"path": "src/routes/day6/rust_crate"
+			"name": "rust",
+			"path": "src/rust"
 		}
 	],
 	"settings": {}

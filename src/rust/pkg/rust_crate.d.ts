@@ -2,11 +2,6 @@
 /* eslint-disable */
 /**
 * @param {string} message
-* @returns {string}
-*/
-export function test_message(message: string): string;
-/**
-* @param {string} message
 * @returns {number}
 */
 export function get_start_packet_marker(message: string): number;
@@ -20,13 +15,10 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly test_message: (a: number, b: number, c: number) => void;
   readonly get_start_packet_marker: (a: number, b: number) => number;
   readonly get_start_message_marker: (a: number, b: number) => number;
-  readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
-  readonly __wbindgen_free: (a: number, b: number) => void;
 }
 
 export type SyncInitInput = BufferSource | WebAssembly.Module;

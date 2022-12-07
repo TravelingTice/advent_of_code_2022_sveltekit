@@ -1,5 +1,5 @@
 <script lang="ts">
-	import init, { get_start_packet_marker, get_start_message_marker, test_message } from 'day-6-rust'
+	import init, { get_start_packet_marker, get_start_message_marker } from 'local-webassembly'
 	import { onMount } from 'svelte'
 
 	export let data: { message: string }
@@ -9,8 +9,6 @@
 
 	onMount(async () => {
 		await init()
-
-		console.log(test_message("test"))
 
 		packetMarker = get_start_packet_marker(data.message)
 		messageMarker = get_start_message_marker(data.message)
@@ -29,7 +27,7 @@
 <p>
 	<a
 		target="_blank"
-		href="https://github.com/TravelingTice/advent_of_code_2022_sveltekit/blob/master/src/routes/day6"
+		href="https://github.com/TravelingTice/advent_of_code_2022_sveltekit/blob/master/src/rust/src/day6.rs"
 		>See the code for this day</a
 	>
 </p>

@@ -6,11 +6,11 @@ specifiers:
   '@sveltejs/kit': next
   '@typescript-eslint/eslint-plugin': ^5.45.0
   '@typescript-eslint/parser': ^5.45.0
-  day-6-rust: ./src/routes/day6/rust_crate/pkg
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte3: ^4.0.0
   husky: ^8.0.2
+  local-webassembly: ./src/rust/pkg
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
   svelte: ^3.53.1
@@ -28,11 +28,11 @@ devDependencies:
   '@sveltejs/kit': 1.0.0-next.572_svelte@3.53.1+vite@3.2.4
   '@typescript-eslint/eslint-plugin': 5.45.0_czs5uoqkd3podpy6vgtsxfc7au
   '@typescript-eslint/parser': 5.45.0_hsf322ms6xhhd4b5ne6lb74y4a
-  day-6-rust: link:src/routes/day6/rust_crate/pkg
   eslint: 8.28.0
   eslint-config-prettier: 8.5.0_eslint@8.28.0
   eslint-plugin-svelte3: 4.0.0_xgu65rlhscpnxffotiaicv6m5i
   husky: 8.0.2
+  local-webassembly: link:src/rust/pkg
   prettier: 2.8.0
   prettier-plugin-svelte: 2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa
   svelte: 3.53.1
