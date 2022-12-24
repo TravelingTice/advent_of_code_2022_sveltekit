@@ -1,6 +1,7 @@
 <script>
 	import GlobalStyles from '$lib/GlobalStyles.svelte'
 	import Nav from '$lib/Nav.svelte'
+	import fullwidth from './fullwidthstore'
 </script>
 
 <svelte:head>
@@ -22,7 +23,7 @@
 	<Nav />
 </header>
 
-<main>
+<main class:fullwidth={$fullwidth}>
 	<slot />
 </main>
 
@@ -53,6 +54,11 @@
 		main {
 			width: 600px;
 			text-align: left;
+		}
+
+		main.fullwidth {
+			width: auto;
+			padding: 0 32px;
 		}
 	}
 
